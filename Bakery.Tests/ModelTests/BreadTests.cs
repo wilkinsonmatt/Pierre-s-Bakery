@@ -9,15 +9,11 @@ namespace Bakery.Tests
   public class BreadTests
   {
     [TestMethod]
-    public void  BreadCost_CostOneCupNoDiscount_Int()
+    public void IsQuantityGreaterThanZero_SeesIfNumberIsNotNegitive_True()
     {
-      //Arrange
-      int coffeeQuantity = 1;
-      double coffeeCost = 5;
-      //Act
-      Coffee coffeeOrder = new Coffee(coffeeQuantity);
-      //Assert
-      Assert.AreEqual(coffeeCost, coffeeOrder.CoffeeCost());
+      int testNum = 1;
+      Bread testOrder = new Bread(testNum);
+      Assert.AreEqual(true, testOrder.IsQuantityGreaterThanZero());
     }
   }
 }
