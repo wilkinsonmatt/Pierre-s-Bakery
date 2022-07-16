@@ -9,13 +9,12 @@ namespace Bakery.Models
   {
     public static void Main()
     {
-      Console.WriteLine("Welcome to the Cafe");
-      Console.WriteLine("Bread: $5.00 a loaf");
-      Console.WriteLine("Bread Special: Buy 2, get 1 free (every 3rd loaf of bread is free.)\n");
-      Console.WriteLine("Pastry: Buy 1 for $2.00 or 3 for $5.00");
+      Console.WriteLine("\n\n~~~~~~ Welcome to Pierre's Bakery ~~~~~~\n\n\n");
+      Console.WriteLine("Bread: $5.00 a loaf (Buy 2, get 1 free)\n\n");
+      Console.WriteLine("Pastry: Buy 1 for $2.00 or 3 for $5.00\n\n\n");
       Console.WriteLine("How many loafs of bread would you like to buy?");
       int breadOder = int.Parse(Console.ReadLine());
-      Bread userBreadOrder = new Bread(breadOder);
+      Bread userBreadOrder = new Bread(breadOder); 
       // Console.WriteLine("How many Pastries would you like to buy?");
       // int pastryResponse = int.Parse(Console.ReadLine());
       // Console.WriteLine("For " + userCoffee.Quantity + " loafs of bread it will be $" + userCoffee.CoffeeCost());

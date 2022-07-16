@@ -11,9 +11,27 @@ namespace Bakery.Tests
     [TestMethod]
     public void IsQuantityGreaterThanZero_SeesIfNumberIsNotNegitive_True()
     {
-      int testNum = 1;
-      Bread testOrder = new Bread(testNum);
+      int breadQuantity = 1;
+      Bread testOrder = new Bread(breadQuantity);
       Assert.AreEqual(true, testOrder.IsQuantityGreaterThanZero());
     }
+    [TestMethod]
+    public void IsQuantityGreaterThanZero_SeesIfNumberIsNotNegitive_False()
+    {
+      int breadQuantity = -1;
+      Bread testOrder = new Bread(breadQuantity);
+      Assert.AreEqual(false, testOrder.IsQuantityGreaterThanZero());
+    }
+
+
+    [TestMethod]
+    public void GetPriceOfBreadOrder_SeesIfNumberIsNotNegitive_Int()
+    {
+      int breadQuantity = 1;
+      int totalCostOfBread = 2;
+      Bread testOrder = new Bread(breadQuantity);
+      Assert.AreEqual(totalCostOfBread, testOrder.GetPriceOfBreadOrder());
+    }
+
   }
 }

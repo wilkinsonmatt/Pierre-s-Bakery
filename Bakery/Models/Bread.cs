@@ -23,5 +23,12 @@ namespace Bakery.Models
       }
     }
 
+    public int GetPriceOfBreadOrder()
+    {
+      int totalPrice = 0;
+      
+      return totalPrice;
+    }
+
   }
 }
