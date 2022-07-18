@@ -26,9 +26,12 @@ namespace Bakery.Models
     public int GetPriceOfBreadOrder()
     {
       int price = 5;
+      int totalPrice = 0;
       //Removes the cost of every 3 bread from the total
-      int totalPrice = (this.Quantity*price)-(price*(this.Quantity/3));
-      
+      if(IsQuantityGreaterThanZero())
+      {
+        totalPrice = (this.Quantity*price)-(price*(this.Quantity/3));
+      }
       return totalPrice;
     }
 
