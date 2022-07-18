@@ -48,6 +48,13 @@ namespace Bakery.Tests
       Bread testOrder = new Bread(breadQuantity);
       Assert.AreEqual(totalCostOfBread, testOrder.GetPriceOfBreadOrder());
     }
-
+    [TestMethod]
+    public void GetPriceOthfBreadOrder_PriceOfNegitiveBread_Int()
+    {
+      int breadQuantity = -1;
+      int totalCostOfBread = 0;
+      Bread testOrder = new Bread(breadQuantity);
+      Assert.AreEqual(totalCostOfBread, testOrder.GetPriceOfBreadOrder());
+    }
   }
 }
